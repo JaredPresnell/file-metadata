@@ -15,10 +15,11 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.get("/upload", uploadService.single('file'), function(req, res){
-  var uploadedFile = req.file;
-  var fileSize = uploadedFile.size
-  res.send(req);
+app.post("/upload", uploadService.single('fileUpload'), function(req, res){
+  var fileSize = req.file.size;
+  var fileName = req.file.originalname;
+  var returnObj = {fileName: fileName, fileSize: fileSize}
+  res.send(returnObj);
 })
 
 // listen for requests :)
