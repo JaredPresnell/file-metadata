@@ -6,7 +6,8 @@ var multer = require('multer');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 var app = express();
-var uploadService = multer({ dest: "uploads/" });
+// var uploadService = multer({ dest: "uploads/" });
+var uploadService = multer({});
 
 
 app.use(express.static('public'));
