@@ -3,6 +3,8 @@
 // init project
 var express = require('express');
 var multer = require('multer');
+var cors = require('cors');
+var bodyParser = require('body-parser');
 var app = express();
 var uploadService = multer({ storage: multer.memoryStorage() });
 

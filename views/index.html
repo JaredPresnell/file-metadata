@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="fileApp">
   <head>
     <title>File Size Info!</title>
     <meta name="description" content="File metadata parser">
@@ -23,11 +23,12 @@
       Choose File
     </button>
     <input type="file" name="sampleFile" />
-    <input type="submit" value = "Upload!" />
+    <input type="submit" value = "Upload!" ng-href="/upload"/>
     <button>
       Submit
     </button>
-    <script src="/client.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>  
+    <script src="public/app.js"></script>
 
   </body>
 </html>
